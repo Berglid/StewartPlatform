@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/">
+        <file>textures/aluminium_random_brushed_metallic.png</file>
+        <file>obj/bottom_plate.obj</file>
+        <file>obj/lower_actuator.obj</file>
+        <file>obj/upper_actuator.obj</file>
+        <file>obj/bottom_plate_w_coord.obj</file>
+        <file>obj/top_plate.obj</file>
+        <file>obj/bottom_plate_w_plane.obj</file>
+        <file>textures/copper_brushed_basecolor.png</file>
+        <file>obj/bottom_plate_dark.obj</file>
+        <file>obj/bottom_plate_light.obj</file>
+        <file>textures/darkGray.png</file>
+        <file>obj/top_plate_dark.obj</file>
+        <file>obj/top_plate_light.obj</file>
+        <file>logo/play.png</file>
+        <file>logo/pause.png</file>
+        <file>logo/stop.png</file>
+        <file>logo/record.png</file>
+        <file>textures/light_grey.jpg</file>
+        <file>textures/medium_grey.png</file>
+        <file>textures/gray45.png</file>
+        <file>textures/gray210.png</file>
+        <file>textures/grey66.png</file>
+        <file>textures/grey105.png</file>
+        <file>textures/grey159.png</file>
+        <file>textures/grey189.png</file>
+        <file>logo/stewart.122.jpg</file>
+        <file>logo/Splash_image.jpg</file>
+        <file>obj/lower_actuator_dark.obj</file>
+        <file>obj/lower_actuator_medium.obj</file>
+        <file>obj/Lower_actuator_light.obj</file>
+        <file>logo/pause_white.png</file>
+        <file>logo/play_white.png</file>
+        <file>logo/stop_white.png</file>
+        <file>logo/reset.png</file>
+        <file>logo/reset_white.png</file>
+        <file>logo/stewart.198.jpg</file>
+    </qresource>
+</RCC>
