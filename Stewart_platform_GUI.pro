@@ -22,25 +22,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    main.cpp \
-    mainwindow.cpp \
-    mouse3dinput.cpp \
-    serial_settings_dialog.cpp \
-    splashscreen.cpp \
-    stewartplatform.cpp \
-    utilities.cpp
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/serial_settings_dialog.cpp \
+    src/splashscreen.cpp \
+    src/stewartplatform.cpp \
+    src/utilities.cpp
 
 HEADERS += \
-    mainwindow.h \
-    mouse3dinput.h \
-    serial_settings_dialog.h \
-    splashscreen.h \
-    stewartplatform.h \
-    utilities.h
+    include/mainwindow.h \
+    include/serial_settings_dialog.h \
+    include/splashscreen.h \
+    include/stewartplatform.h \
+    include/utilities.h
 
 FORMS += \
-    mainwindow.ui \
-    serial_settings_dialog.ui
+    ui/mainwindow.ui \
+    ui/serial_settings_dialog.ui
 
 
 QT       += widgets serialport
@@ -64,7 +62,6 @@ LIBS += "/home/grans/Documents/Attachment/not to be shared/3Dconnexion/3DxWare S
 # LIBS += "C:/Users/Frode/AppData/Local/Programs/3Dconnexion/3DxWare SDK/Lib/x64/spwmath.lib"
 # LIBS += "C:/Users/Frode/AppData/Local/Programs/3Dconnexion/3DxWare SDK/Lib/x64/spwmath.lib"
 # LIBS += "C:/Users/Frode/AppData/Local/Programs/3Dconnexion/3DxWare SDK/Lib/x64/spwmathMT.lib"
-# LIBS += "C:/Users/Frode/AppData/Local/Programs/3Dconnexion/3DxWare SDK/Lib/x64/spwmathMTD.lib"
 
 
 # Default rules for deployment.
@@ -76,6 +73,12 @@ RESOURCES += \
     assets/resources.qrc
 
 DISTFILES += \
-    Demo/testDemo.txt \
     Notes \
-    demo1
+    README.md
+
+# For some reason eigen3 is installed under `/usr/include/eigen3`
+# which means that you have to included as e.g. `#include <eigen3/Eigen/Dense>`.
+# The two lines below solve this.
+# Source: https://askubuntu.com/a/491188
+unix: CONFIG += link_pkgconfig
+unix: PKGCONFIG += eigen3
